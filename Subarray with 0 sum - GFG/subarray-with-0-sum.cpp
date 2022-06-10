@@ -13,19 +13,18 @@ class Solution{
     //Function to check whether there is a subarray present with 0-sum or not.
     bool subArrayExists(int arr[], int n)
     {
-        unordered_map<int, int> m;
-        int ps=0;
-        m[ps]=0;
+        unordered_map<int,int> m;
+        int sum;
+        m[sum]=0;
         for(int i=0;i<n;i++)
         {
-            ps+=arr[i];
-            if(m.find(ps)!=m.end())
-            {
-                return true;
-            }
-            m[ps]=0;
+            sum+=arr[i];
+            if(m.find(sum)!= m.end())
+            return true;
+            m[sum]=0;
         }
         return false;
+        //Your code here
     }
 };
 
