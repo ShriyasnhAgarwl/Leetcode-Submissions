@@ -10,17 +10,17 @@
  */
 class Solution {
 public:
-    ListNode *start;
+    
     bool isPalindrome(ListNode* head) {
-        start=head;
-        return check(head);
+        
+        return check(&head,head);
     }
-    bool check(ListNode *curr)
+    bool check(ListNode **start,ListNode *curr)
     {
         if(curr == NULL){ return true;}
-        bool value=check(curr->next);
-        bool value2 = (start->val == curr->val);
-        start=start->next;
+        bool value=check(start,curr->next);
+        bool value2 = ((*start)->val == curr->val);
+        (*start) = (*start)->next;
         return value&&value2;
     }
 };
