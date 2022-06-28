@@ -20,3 +20,23 @@ public:
         return curNotHold;
     }
 };
+// class Solution {
+// public:
+//     int slv(vector<vector<int>>&dp, vector<int>&a, int i, int j) {
+//         if(i>=a.size()) {
+//             return 0;
+//         }
+//         if(dp[i][j]!=-1) {
+//             return dp[i][j];
+//         }
+//         if(j==0) {
+//             return dp[i][j] = max(-a[i] + slv(dp,a,i+1,1), slv(dp,a,i+1,0));
+//         }
+//         return dp[i][j] = max(a[i] + slv(dp,a,i+1,0), slv(dp,a,i+1,1));
+//     }
+//     int maxProfit(vector<int>& a) {
+//         int n = a.size();
+//         vector<vector<int>>dp(n,vector<int>(2,-1));
+//         return slv(dp,a,0,0);
+//     }
+// };
