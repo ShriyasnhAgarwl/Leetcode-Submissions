@@ -4,23 +4,20 @@
 class Solution {
 public:
     int firstBadVersion(int n) {
-        int low=1;
-        int high=n;
-        int ans;
-        while(low<=high)
+        int m=0, c=-1;
+        while(m<=n)
         {
-            int mid= low + (high - low)/2;
+            int mid= m+(n-m)/2;
             if(isBadVersion(mid))
             {
-                ans = mid;
-                high = mid - 1;
+                n=mid-1;
+                c= mid;
             }
             else
             {
-                low = mid +1 ;
-                
+                m=mid+1;
             }
         }
-        return ans;
+        return c;
     }
 };
