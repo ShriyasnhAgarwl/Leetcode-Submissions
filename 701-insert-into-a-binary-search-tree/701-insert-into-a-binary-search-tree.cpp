@@ -35,6 +35,7 @@ public:
         }
         
     }
+    //main function
     TreeNode* insertIntoBST(TreeNode* root, int val) {
         if(root==NULL) {return new TreeNode(val);}
         else
