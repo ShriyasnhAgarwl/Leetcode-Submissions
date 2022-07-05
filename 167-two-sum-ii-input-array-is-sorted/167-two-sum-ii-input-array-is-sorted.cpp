@@ -1,26 +1,26 @@
 class Solution {
 public:
-    vector<int> twoSum(vector<int>& a, int target) {
-        int i=0;
-        int j=a.size()-1;
-        vector<int> index(2,0);
-        while(i<j)
+    vector<int> twoSum(vector<int>& numbers, int target) {
+        int front=0;
+        int end=numbers.size()-1;
+        vector<int> vec;
+        while(front<end)
         {
-            if(a[i]+a[j]==target)
+            if(numbers[front]+numbers[end]==target)
             {
-                index[0]=i+1;
-                index[1]=j+1;
+                vec.push_back(front+1);
+                vec.push_back(end+1);
                 break;
-            }
-            else if((a[i]+a[j])>target)
+                }
+            if(numbers[front]+numbers[end]>target)
             {
-                j--;
+                end--;
             }
             else
             {
-                i++;
+                front++;
             }
         }
-        return index;
+       return vec;
     }
 };
