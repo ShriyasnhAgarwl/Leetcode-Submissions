@@ -2,10 +2,11 @@ class MyHashMap {
 public:
     vector<int> mp;
     MyHashMap() {
-        for(int i =0;i<1000000;i++)
-        {
-            mp.push_back(-1);
-        }
+        // for(int i =0;i<1000000;i++)
+        // {
+        //     mp.push_back(-1);
+        // }
+        mp=vector<int> (1000001,-1);
     }
     
     void put(int key, int value) {
