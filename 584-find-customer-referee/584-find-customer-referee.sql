@@ -1,9 +1,7 @@
 # Write your MySQL query statement below
-SELECT
+SELECT 
 name
 FROM
 Customer
 WHERE
-id 
-NOT IN 
-(SELECT id FROM Customer WHERE referee_id=2);
+id NOT IN (SELECT id FROM Customer WHERE referee_id=2);
