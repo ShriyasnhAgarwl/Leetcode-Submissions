@@ -4,5 +4,4 @@ name as Customers
 FROM
 Customers
 WHERE
-id NOT IN
-(SELECT customerId FROM ORDERS);
+id NOT IN (SELECT customerId FROM ORDERS);
